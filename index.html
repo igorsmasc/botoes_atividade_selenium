@@ -13,13 +13,14 @@
 <body>
     <div class="container my-5">
         <h1 class="text-center mb-5">Praticando Cliques em Botões</h1>
-        <p class="text-center">Crie um teste para cada botão utilizando o respectivo seletor e valide o texto do alerta.</p>
+        <p class="text-center">Crie um teste para cada botão utilizando o respectivo seletor e valide o texto do alerta.
+        </p>
         <hr>
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-xl-4 mb-4">
                     <div class="card-header">
-                        <h3>ID</h3>
+                        <h3>1 - ID</h3>
                     </div>
                     <div class="card border-0 shadow-sm">
                         <div class="card-body text-center">
@@ -30,94 +31,173 @@
                 <div class="col-lg-6 col-xl-4 mb-4">
                     <div class="card border-0 shadow-sm">
                         <div class="card-header">
-                            <h3>CSS</h3>
+                            <h3>2 - ClassName</h3>
                         </div>
                         <div class="card-body text-center">
-                            <button class="btn btn-primary btn-lg btn-block botao-2">Botão dois</button>
+                            <button class="btn btn-primary btn-lg btn-block button-2" id="button2">Botão dois</button>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-xl-4 mb-4">
                     <div class="card border-0 shadow-sm">
                         <div class="card-header">
-                            <h3>XPATH</h3>
+                            <h3>3- Name</h3>
                         </div>
                         <div class="card-body text-center">
-                            <button class="btn btn-primary btn-lg btn-block">Botão três</button>
+                            <button name="button3" class="btn btn-primary btn-lg btn-block" id="button3">Botão
+                                três</button>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-xl-4 mb-4">
                     <div class="card border-0 shadow-sm">
                         <div class="card-header">
-                            <h3>LIVRE</h3>
+                            <h3>4 - CSS</h3>
                         </div>
                         <div class="card-body text-center">
-                            <button class="btn btn-primary btn-lg btn-block botao-4" id="button4" disabled>Botão quatro</button>
+                            <button class="btn btn-primary btn-lg btn-block" id="button4">Botão quatro</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-4 mb-4">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-header">
+                            <h3>5 - XPATH</h3>
+                        </div>
+                        <div class="card-body text-center">
+                            <button class="btn btn-primary btn-lg btn-block" id="button5">Botão cinco</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-4 mb-4">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-header">
+                            <h3>6 - LIVRE</h3>
+                        </div>
+                        <div class="card-body text-center">
+                            <button class="btn btn-primary btn-lg btn-block button6" id="button6" disabled>Botão
+                                seis</button>
                         </div>
                         <div class="card-footer bg-white">
                             <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" id="button4-switch">
-                                <label class="form-check-label" for="button4-switch">Habilitar Botão quatro</label>
+                                <input class="form-check-input" type="checkbox" id="button6-switch">
+                                <label class="form-check-label" for="button6-switch">Habilitar Botão seis</label>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <hr>
-            <div class="accordion" id="selectorsAccordion">
+            <div class="accordion" id="seletoresAccordion">
                 <div class="accordion-item">
-                    <h2 class="accordion-header" id="idSelector">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#idSelectorCollapse" aria-expanded="false"
-                            aria-controls="idSelectorCollapse">
-                            Seletor por ID
+                    <h2 class="accordion-header" id="idHeader">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#idCollapse" aria-expanded="true" aria-controls="idCollapse">
+                            Seletor ID
                         </button>
                     </h2>
-                    <div id="idSelectorCollapse" class="accordion-collapse collapse" aria-labelledby="idSelector"
-                        data-bs-parent="#selectorsAccordion">
+                    <div id="idCollapse" class="accordion-collapse collapse show" aria-labelledby="idHeader"
+                        data-bs-parent="#seletoresAccordion">
                         <div class="accordion-body">
-                            O seletor por ID é utilizado para selecionar um elemento HTML pelo seu ID único. Para
-                            utilizar esse seletor, utilize o caractere '#' seguido pelo ID do elemento que deseja
-                            selecionar. Exemplo: #meu-elemento
+                            O seletor ID é usado para selecionar um elemento HTML com base em um ID exclusivo atribuído
+                            a ele.
+                            Isso é feito utilizando o método <code>findElement(By.id("id-do-elemento"))</code> do
+                            WebDriver.
+                            O ID é um atributo HTML que é atribuído a um elemento HTML e é exclusivo em toda a página.
+                            Por exemplo, <code>&lt;input type="text" id="username"&gt;</code> pode ser selecionado com o
+                            seletor ID
+                            <code>findElement(By.id("username"))</code>.
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <h2 class="accordion-header" id="cssSelector">
+                    <h2 class="accordion-header" id="classHeader">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#cssSelectorCollapse" aria-expanded="false"
-                            aria-controls="cssSelectorCollapse">
-                            Seletor por CSS
+                            data-bs-target="#classCollapse" aria-expanded="false" aria-controls="classCollapse">
+                            Seletor ClassName
                         </button>
                     </h2>
-                    <div id="cssSelectorCollapse" class="accordion-collapse collapse" aria-labelledby="cssSelector"
-                        data-bs-parent="#selectorsAccordion">
+                    <div id="classCollapse" class="accordion-collapse collapse" aria-labelledby="classHeader"
+                        data-bs-parent="#seletoresAccordion">
                         <div class="accordion-body">
-                            O seletor por CSS é utilizado para selecionar elementos HTML com base em suas propriedades
-                            CSS. Para utilizar esse seletor, utilize a sintaxe CSS. Exemplo: .minha-classe ou
-                            tag[atributo=valor]
+                            O seletor ClassName é usado para selecionar um ou mais elementos HTML com base em uma classe
+                            específica atribuída a eles.
+                            Isso é feito utilizando o método <code>findElement(By.className("nome-da-classe"))</code> do
+                            WebDriver.
+                            A classe é um atributo HTML que é atribuído a um ou mais elementos HTML.
+                            Por exemplo, <code>&lt;button class="botao-2"&gt;Enviar&lt;/button&gt;</code> pode ser
+                            selecionado com o seletor ClassName
+                            <code>findElement(By.className("botao-2"))</code>.
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <h2 class="accordion-header" id="xpathSelector">
+                    <h2 class="accordion-header" id="nameHeader">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#xpathSelectorCollapse" aria-expanded="false"
-                            aria-controls="xpathSelectorCollapse">
-                            Seletor por XPath
+                            data-bs-target="#nameCollapse" aria-expanded="false" aria-controls="nameCollapse">
+                            Seletor Name
                         </button>
                     </h2>
-                    <div id="xpathSelectorCollapse" class="accordion-collapse collapse" aria-labelledby="xpathSelector"
-                        data-bs-parent="#selectorsAccordion">
+                    <div id="nameCollapse" class="accordion-collapse collapse" aria-labelledby="nameHeader"
+                        data-bs-parent="#seletoresAccordion">
                         <div class="accordion-body">
-                            O seletor por XPath é utilizado para selecionar elementos HTML com base em suas propriedades
-                            e localização na árvore DOM. Para utilizar esse seletor, utilize a sintaxe XPath. Exemplo:
-                            //div[@class='minha-classe']
+                            O seletor Name é usado para selecionar um ou mais elementos HTML com base no valor do
+                            atributo "name" atribuído a eles.
+                            Isso é feito utilizando o método <code>findElement(By.name("valor-do-atributo-name"))</code>
+                            do WebDriver.
+                            O atributo "name" é um atributo HTML que é atribuído a um ou mais elementos HTML.
+                            Por exemplo, <code>&lt;input type="text" name="usuario"&gt;</code> pode ser selecionado com
+                            o seletor Name <code>findElement(By.name("usuario"))</code>.
+                        </div>
+                    </div>
+
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="cssHeader">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#cssCollapse" aria-expanded="false" aria-controls="cssCollapse">
+                            Seletor CSS
+                        </button>
+                    </h2>
+                    <div id="cssCollapse" class="accordion-collapse collapse" aria-labelledby="cssHeader"
+                        data-bs-parent="#seletoresAccordion">
+                        <div class="accordion-body">
+                            O seletor CSS é usado para selecionar um ou mais elementos HTML com base em um seletor CSS
+                            específico.
+                            Isso é feito utilizando o método <code>findElement(By.cssSelector("seletor-css"))</code> do
+                            WebDriver.
+                            Os seletores CSS permitem que você selecione elementos com base em atributos, valores de
+                            atributos, classes, IDs e muito mais.
+                            Por exemplo, <code>&lt;div class="classe-1"&gt;&lt;p&gt;Hello&lt;/p&gt;&lt;/div&gt;</code>
+                            pode ser selecionado com o seletor CSS
+                            <code>findElement(By.cssSelector("div.classe-1 p"))</code>.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="xpathHeader">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#xpathCollapse" aria-expanded="false" aria-controls="xpathCollapse">
+                            Seletor Xpath
+                        </button>
+                    </h2>
+                    <div id="xpathCollapse" class="accordion-collapse collapse" aria-labelledby="xpathHeader"
+                        data-bs-parent="#seletoresAccordion">
+                        <div class="accordion-body">
+                            O seletor Xpath é usado para selecionar um ou mais elementos HTML com base em um caminho
+                            específico no documento HTML.
+                            Isso é feito utilizando o método <code>findElement(By.xpath("caminho-xpath"))</code> do
+                            WebDriver.
+                            Os caminhos XPath permitem que você selecione elementos com base em sua localização no
+                            documento HTML, seus atributos e muito mais.
+                            Por exemplo, <code>&lt;div class="classe-2"&gt;&lt;p&gt;World&lt;/p&gt;&lt;/div&gt;</code>
+                            pode ser selecionado com o seletor Xpath
+                            <code>findElement(By.xpath("//div[@class='classe-2']/p"))</code>.
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
     <footer class="footer mt-auto py-3">
