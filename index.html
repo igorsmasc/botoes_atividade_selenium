@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Praticando Cliques em botões</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container my-5">
+        <h1 class="text-center mb-5">Praticando Cliques em Botões</h1>
+        <p class="text-center">Crie um teste para cada botão utilizando o respectivo seletor e valide o texto do alerta.</p>
+        <hr>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-xl-4 mb-4">
+                    <div class="card-header">
+                        <h3>ID</h3>
+                    </div>
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <button class="btn btn-primary btn-lg btn-block" id="button1">Botão um</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-4 mb-4">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-header">
+                            <h3>CSS</h3>
+                        </div>
+                        <div class="card-body text-center">
+                            <button class="btn btn-primary btn-lg btn-block" id="button2">Botão dois</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-4 mb-4">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-header">
+                            <h3>XPATH</h3>
+                        </div>
+                        <div class="card-body text-center">
+                            <button class="btn btn-primary btn-lg btn-block" id="button3">Botão três</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-4 mb-4">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-header">
+                            <h3>LIVRE</h3>
+                        </div>
+                        <div class="card-body text-center">
+                            <button class="btn btn-primary btn-lg btn-block" id="button4" disabled>Botão quatro</button>
+                        </div>
+                        <div class="card-footer bg-white">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="button4-switch">
+                                <label class="form-check-label" for="button4-switch">Habilitar Botão quatro</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="accordion" id="selectorsAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="idSelector">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#idSelectorCollapse" aria-expanded="false"
+                            aria-controls="idSelectorCollapse">
+                            Seletor por ID
+                        </button>
+                    </h2>
+                    <div id="idSelectorCollapse" class="accordion-collapse collapse" aria-labelledby="idSelector"
+                        data-bs-parent="#selectorsAccordion">
+                        <div class="accordion-body">
+                            O seletor por ID é utilizado para selecionar um elemento HTML pelo seu ID único. Para
+                            utilizar esse seletor, utilize o caractere '#' seguido pelo ID do elemento que deseja
+                            selecionar. Exemplo: #meu-elemento
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="cssSelector">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#cssSelectorCollapse" aria-expanded="false"
+                            aria-controls="cssSelectorCollapse">
+                            Seletor por CSS
+                        </button>
+                    </h2>
+                    <div id="cssSelectorCollapse" class="accordion-collapse collapse" aria-labelledby="cssSelector"
+                        data-bs-parent="#selectorsAccordion">
+                        <div class="accordion-body">
+                            O seletor por CSS é utilizado para selecionar elementos HTML com base em suas propriedades
+                            CSS. Para utilizar esse seletor, utilize a sintaxe CSS. Exemplo: .minha-classe ou
+                            tag[atributo=valor]
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="xpathSelector">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#xpathSelectorCollapse" aria-expanded="false"
+                            aria-controls="xpathSelectorCollapse">
+                            Seletor por XPath
+                        </button>
+                    </h2>
+                    <div id="xpathSelectorCollapse" class="accordion-collapse collapse" aria-labelledby="xpathSelector"
+                        data-bs-parent="#selectorsAccordion">
+                        <div class="accordion-body">
+                            O seletor por XPath é utilizado para selecionar elementos HTML com base em suas propriedades
+                            e localização na árvore DOM. Para utilizar esse seletor, utilize a sintaxe XPath. Exemplo:
+                            //div[@class='minha-classe']
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer mt-auto py-3">
+        <div class="container text-center">
+            <span class="text-muted">&copy; 2023 <a href="https://www.linkedin.com/in/igor-mascarenhas/"
+                    target="_blank">Professor Igor Mascarenhas</a>. Código para aulas de automação.</span>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
