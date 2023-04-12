@@ -36,4 +36,20 @@ $(document).ready(function () {
       $("#button6").prop("disabled", true);
     }
   });
+
+  $("#link1").click(function () {
+    alert("O link 1 foi selecionado.");
+  });
+
+  $("#link2").click(function () {
+    alert("O link 2 foi selecionado.");
+  });
+
+  $("#link3").click(function () {
+    alert("O link 3 foi selecionado.");
+  });
+});
+
+$(document).on('click', 'a', function(event) {
+  event.preventDefault();
 });

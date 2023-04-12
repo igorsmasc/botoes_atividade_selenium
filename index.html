@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Praticando Cliques em botões</title>
+    <title>Praticando Cliques em botões e Links</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -86,6 +86,36 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-6 col-xl-4 mb-4">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-header">
+                            <h3>7 - Link Text</h3>
+                        </div>
+                        <div class="card-body text-center">
+                            <a id="link1" href="#" class="link-success">Link 1</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-4 mb-4">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-header">
+                            <h3>8 - Partial Link Text</h3>
+                        </div>
+                        <div class="card-body text-center">
+                            <a id="link2" href="#" class="link-info">Link 2</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-4 mb-4">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-header">
+                            <h3>9 - Livre</h3>
+                        </div>
+                        <div class="card-body text-center">
+                            <a id="link3" href="#" class="link-danger">Link 3</a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <hr>
             <div class="accordion" id="seletoresAccordion">
@@ -93,19 +123,19 @@
                     <h2 class="accordion-header" id="idHeader">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
                             data-bs-target="#idCollapse" aria-expanded="true" aria-controls="idCollapse">
-                            Seletor ID
+                            Locator ID
                         </button>
                     </h2>
                     <div id="idCollapse" class="accordion-collapse collapse show" aria-labelledby="idHeader"
                         data-bs-parent="#seletoresAccordion">
                         <div class="accordion-body">
-                            O seletor ID é usado para selecionar um elemento HTML com base em um ID exclusivo atribuído
+                            O locator ID é usado para selecionar um elemento HTML com base em um ID exclusivo atribuído
                             a ele.
                             Isso é feito utilizando o método <code>findElement(By.id("id-do-elemento"))</code> do
                             WebDriver.
                             O ID é um atributo HTML que é atribuído a um elemento HTML e é exclusivo em toda a página.
                             Por exemplo, <code>&lt;input type="text" id="username"&gt;</code> pode ser selecionado com o
-                            seletor ID
+                            locator ID
                             <code>findElement(By.id("username"))</code>.
                         </div>
                     </div>
@@ -120,13 +150,13 @@
                     <div id="classCollapse" class="accordion-collapse collapse" aria-labelledby="classHeader"
                         data-bs-parent="#seletoresAccordion">
                         <div class="accordion-body">
-                            O seletor ClassName é usado para selecionar um ou mais elementos HTML com base em uma classe
+                            O locator ClassName é usado para selecionar um ou mais elementos HTML com base em uma classe
                             específica atribuída a eles.
                             Isso é feito utilizando o método <code>findElement(By.className("nome-da-classe"))</code> do
                             WebDriver.
                             A classe é um atributo HTML que é atribuído a um ou mais elementos HTML.
                             Por exemplo, <code>&lt;button class="botao-2"&gt;Enviar&lt;/button&gt;</code> pode ser
-                            selecionado com o seletor ClassName
+                            selecionado com o locator ClassName
                             <code>findElement(By.className("botao-2"))</code>.
                         </div>
                     </div>
@@ -135,19 +165,19 @@
                     <h2 class="accordion-header" id="nameHeader">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#nameCollapse" aria-expanded="false" aria-controls="nameCollapse">
-                            Seletor Name
+                            Locator Name
                         </button>
                     </h2>
                     <div id="nameCollapse" class="accordion-collapse collapse" aria-labelledby="nameHeader"
                         data-bs-parent="#seletoresAccordion">
                         <div class="accordion-body">
-                            O seletor Name é usado para selecionar um ou mais elementos HTML com base no valor do
+                            O locator Name é usado para selecionar um ou mais elementos HTML com base no valor do
                             atributo "name" atribuído a eles.
                             Isso é feito utilizando o método <code>findElement(By.name("valor-do-atributo-name"))</code>
                             do WebDriver.
                             O atributo "name" é um atributo HTML que é atribuído a um ou mais elementos HTML.
                             Por exemplo, <code>&lt;input type="text" name="usuario"&gt;</code> pode ser selecionado com
-                            o seletor Name <code>findElement(By.name("usuario"))</code>.
+                            o locator Name <code>findElement(By.name("usuario"))</code>.
                         </div>
                     </div>
 
@@ -178,21 +208,53 @@
                     <h2 class="accordion-header" id="xpathHeader">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#xpathCollapse" aria-expanded="false" aria-controls="xpathCollapse">
-                            Seletor Xpath
+                            Locator Xpath
                         </button>
                     </h2>
                     <div id="xpathCollapse" class="accordion-collapse collapse" aria-labelledby="xpathHeader"
                         data-bs-parent="#seletoresAccordion">
                         <div class="accordion-body">
-                            O seletor Xpath é usado para selecionar um ou mais elementos HTML com base em um caminho
+                            O locator Xpath é usado para selecionar um ou mais elementos HTML com base em um caminho
                             específico no documento HTML.
                             Isso é feito utilizando o método <code>findElement(By.xpath("caminho-xpath"))</code> do
                             WebDriver.
                             Os caminhos XPath permitem que você selecione elementos com base em sua localização no
                             documento HTML, seus atributos e muito mais.
                             Por exemplo, <code>&lt;div class="classe-2"&gt;&lt;p&gt;World&lt;/p&gt;&lt;/div&gt;</code>
-                            pode ser selecionado com o seletor Xpath
+                            pode ser selecionado com o locator Xpath
                             <code>findElement(By.xpath("//div[@class='classe-2']/p"))</code>.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="linkTextHeader">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#linkTextCollapse" aria-expanded="false" aria-controls="linkTextCollapse">
+                            Seletor Link Text
+                        </button>
+                    </h2>
+                    <div id="linkTextCollapse" class="accordion-collapse collapse" aria-labelledby="linkTextHeader"
+                        data-bs-parent="#seletoresAccordion">
+                        <div class="accordion-body">
+                            O locator linkText localiza elementos de página com base em seu texto completo. 
+                            Por exemplo, se houver um link na página com o texto "Clique aqui", podemos localizá-lo com o seguinte código: <code>driver.findElement(By.linkText("Clique aqui"))</code> do
+                            WebDriver.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="partialLinkTextHeader">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#partialLinkCollapse" aria-expanded="false" aria-controls="partialLinkCollapse">
+                            Seletor Partial Link Text
+                        </button>
+                    </h2>
+                    <div id="partialLinkCollapse" class="accordion-collapse collapse" aria-labelledby="partialLinkHeader"
+                        data-bs-parent="#seletoresAccordion">
+                        <div class="accordion-body">
+                            O locator partialLinkText é semelhante ao linkText, mas localiza elementos de página com base em um texto parcial em vez de texto completo. 
+                            Por exemplo, se houver um link na página com o texto "Clique aqui para saber mais", podemos localizá-lo com o seguinte código usando o WebDriver:
+                            <code>driver.findElement(By.partialLinkText("Clique aqui"))</code>.
                         </div>
                     </div>
                 </div>
